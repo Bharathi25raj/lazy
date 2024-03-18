@@ -1,14 +1,15 @@
 import './App.css';
-import Home from './Pages/Home';
+// import Home from './Pages/Home';
 // import About from './Pages/About';
 // import Testimonial from './Pages/Testimonial';
 // import Product from './Pages/Product';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NavBar from './Components/NavBar';
-import { Suspense, lazy } from 'react';
-const Product = lazy(() => import('./Pages/Product'))
-const About = lazy(() => import('./Pages/About'));
-const Testimonial = lazy(() => import('./Pages/Testimonial'));
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import NavBar from './Components/NavBar';
+// import { Suspense, lazy } from 'react';
+import HoCA from './Components/CompA';
+// const Product = lazy(() => import('./Pages/Product'))
+// const About = lazy(() => import('./Pages/About'));
+// const Testimonial = lazy(() => import('./Pages/Testimonial'));
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
         }
       </div> */}
 
-      <Suspense fallback={<h2>...Loading</h2>}>
+      {/* <Suspense fallback={<h2>...Loading</h2>}>
         <BrowserRouter>
           <NavBar />
           <Routes>
@@ -43,7 +44,10 @@ function App() {
             <Route path='/testimonial' element={<Testimonial />}></Route>
           </Routes>
         </BrowserRouter>
-      </Suspense>
+      </Suspense> */}
+
+      <HoCA yellow/>
+      <HoCA dark/>
       
     </>
   );
